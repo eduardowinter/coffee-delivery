@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #FAFAFA;
 }
 
 Header {
@@ -40,6 +41,12 @@ Header {
   cursor: pointer;
 }
 
+.banner-container {
+  background-image: url("./assets/background-image.png");
+  background-size: cover;
+  height: 600px;
+}
+
 .banner {
   padding: 2rem;
   margin-left: 8rem;
@@ -48,14 +55,76 @@ Header {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+
+}
+
+.banner-phrase {
+  display: flex;
+  justify-content: left;
   font-size: 48px;
   font-weight: bold;
 }
 
-/* .banner-benefits {
-  align-items: center;
-  justify-content: space-between;
+.banner-benefits {
 
-  display: grid;
-  grid-template-columns: 231px 294px;
-} */
+  display: flex;
+  flex-direction: row;
+}
+
+
+.table-a1 {
+  height: 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.table-left {
+  width: 231px;
+}
+.table-right {
+  width: 294px;
+}
+
+.icon-1 {
+  display: flex;
+  height: 32px;
+  width: 32px;
+  border-radius: 9999px;
+  background-color: #C47F17;
+  align-items: center;
+  justify-content: center;;
+}
+
+.icon-2 {
+  display: flex;
+  height: 32px;
+  width: 32px;
+  border-radius: 9999px;
+  background-color: #DBAC2C;
+  align-items: center;
+  justify-content: center;;
+}
+
+.icon-3 {
+  display: flex;
+  height: 32px;
+  width: 32px;
+  border-radius: 9999px;
+  background-color: #574F4D;
+  align-items: center;
+  justify-content: center;;
+}
+
+.icon-4 {
+  display: flex;
+  height: 32px;
+  width: 32px;
+  border-radius: 9999px;
+  background-color: #8047F8;
+  align-items: center;
+  justify-content: center;;
+}

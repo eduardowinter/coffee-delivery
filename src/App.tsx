@@ -1,4 +1,4 @@
-import { MapPin, ShoppingCart } from 'phosphor-react'
+import { MapPin, ShoppingCart, Timer, Package, Coffee } from 'phosphor-react'
 import './App.css'
 import logo from './assets/logo-coffee-delivery.svg'
 import coffeeArt from './assets/coffee-art.png'
@@ -22,19 +22,47 @@ function Header() {
 
 function Banner() {
   return (
-    <div className="banner">
-      <div>
+    <div className="banner-container">
+      <div className="banner">
         <div>
-          Find the perfect coffee<br></br> for any time of the day
+          <div className="banner-phrase">
+            <div>
+              Find the perfect coffee<br></br> for any time of the day
+            </div>
+          </div>
+          <div className="banner-benefits">
+            <div className="table-left">
+              <div className="table-a1">
+                <div className="icon-1">
+                  <ShoppingCart size={16} color="#FAFAFA" weight="fill" />
+                </div>
+                Easy and safe purchase
+              </div>
+              <div className="table-a1">
+                <div className="icon-2">
+                  <Timer size={16} color="#FAFAFA" weight="fill" />
+                </div>
+                Fast and tracked delivery
+              </div>
+            </div>
+            <div className="table-right">
+              <div className="table-a1">
+                <div className="icon-3">
+                  <Package size={16} color="#FAFAFA" weight="fill" />
+                </div>
+                Package mantains coffee intact
+              </div>
+              <div className="table-a1">
+                <div className="icon-4">
+                  <Coffee size={16} color="#FAFAFA" weight="fill" />
+                </div>
+                Coffee arrives fresh for you
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="banner-benefits">
-          <div className="item1">Vantagens</div>
-          <div className="item2">outra vant</div>
-          <div className="item3">outra vant</div>
-          <div className="item4">outra vant</div>
-        </div>
+        <img src={coffeeArt} alt="coffee-art" />
       </div>
-      <img src={coffeeArt} alt="coffee-art" />
     </div>
   )
 }
