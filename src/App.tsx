@@ -1,6 +1,15 @@
-import { MapPin, ShoppingCart, Timer, Package, Coffee } from 'phosphor-react'
+import {
+  MapPin,
+  ShoppingCart,
+  Timer,
+  Package,
+  Coffee,
+  Minus,
+  Plus,
+} from 'phosphor-react'
 import './App.css'
 import logo from './assets/logo-coffee-delivery.svg'
+import coffee from './assets/Coffee.png'
 import coffeeArt from './assets/coffee-art.png'
 
 function Header() {
@@ -24,11 +33,15 @@ function Banner() {
   return (
     <div className="banner-container">
       <div className="banner">
-        <div>
+        <div className="banner-left">
           <div className="banner-phrase">
-            <div>
+            <h1>
               Find the perfect coffee<br></br> for any time of the day
-            </div>
+            </h1>
+            <h6>
+              With Coffee Delivery you receive your coffee anywhere,<br></br> at
+              any time of the day.
+            </h6>
           </div>
           <div className="banner-benefits">
             <div className="table-left">
@@ -67,14 +80,69 @@ function Banner() {
   )
 }
 
+function ProductBox() {
+  return (
+    <div className="product-box">
+      <img
+        className="product-image"
+        src={coffee}
+        alt="tradicional-express-coffee"
+      />
+      <div className="product-tags">
+        <div className="product-tag">Tradicional</div>
+        <div className="product-tag">Gelado</div>
+      </div>
+      <div className="product-name">Expresso Tradicional</div>
+      <div className="product-description">
+        O tradicional café feito com água quente e grãos moídos
+      </div>
+      <div className="product-shopping-container">
+        <div className="product-price">R$ 9,90</div>
+        <div className="product-shopping">
+          <div className="product-quantity-selector">
+            <Minus size={16} weight="fill" />
+            1
+            <Plus size={16} weight="fill" />
+          </div>
+          <div className="product-shoping-cart-icon">
+            <ShoppingCart size={16} color="#FAFAFA" weight="fill" />
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function ProductList() {
+  return (
+    <>
+      <div className="products-list-title">Our Coffees</div>
+      <div className="products-list">
+        <ProductBox />
+        <ProductBox />
+        <ProductBox />
+        <ProductBox />
+        <ProductBox />
+        <ProductBox />
+        <ProductBox />
+        <ProductBox />
+        <ProductBox />
+        <ProductBox />
+        <ProductBox />
+        <ProductBox />
+        <ProductBox />
+        <ProductBox />
+      </div>
+    </>
+  )
+}
+
 function App() {
   return (
     <div className="App">
       <Header />
-
       <Banner />
-
-      <div className="products-list">Products-List</div>
+      <ProductList />
     </div>
   )
 }

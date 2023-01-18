@@ -1,0 +1,14 @@
+{
+  "coffees": [
+    {
+      "id": 1,
+      "name": "Cafe 1",
+      "tags": ["1", "2", "3"],
+      "description": "Descrição Café 1",
+      "price": 9.90,
+      "image_link": "url"
+    },
+    {}
+  ]
+
+}
