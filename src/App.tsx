@@ -9,7 +9,7 @@ import {
 } from 'phosphor-react'
 import './App.css'
 import logo from './assets/logo-coffee-delivery.svg'
-import coffee from './assets/Coffee.png'
+// import coffee from './assets/Coffee.png'
 import coffeeArt from './assets/coffee-art.png'
 import { v4 as uuidv4 } from 'uuid'
 
@@ -89,7 +89,7 @@ function ProductBox() {
       tags: ['Tradicional'],
       description: 'O tradicional café feito com água quente e grãos moídos',
       price: 8.3,
-      image_link: 'url',
+      image_link: '/src/assets/Coffee.png',
     },
     {
       id: uuidv4(),
@@ -97,7 +97,7 @@ function ProductBox() {
       tags: ['Tradicional'],
       description: 'Expresso diluído, menos intenso que o tradicional',
       price: 9.8,
-      image_link: 'url',
+      image_link: '/src/assets/Coffee (1).png',
     },
     {
       id: uuidv4(),
@@ -105,7 +105,7 @@ function ProductBox() {
       tags: ['Tradicional', 'Gelado'],
       description: 'Café expresso tradicional com espuma cremosa',
       price: 12.0,
-      image_link: 'url',
+      image_link: '/src/assets/Coffee (2).png',
     },
     {
       id: uuidv4(),
@@ -113,7 +113,7 @@ function ProductBox() {
       tags: ['Tradicional', 'Gelado'],
       description: 'Bebida preparada com café expresso e cubos de gelo',
       price: 8.8,
-      image_link: 'url',
+      image_link: '/src/assets/Coffee (3).png',
     },
     {
       id: uuidv4(),
@@ -121,7 +121,7 @@ function ProductBox() {
       tags: ['Tradicional', 'Com Leite'],
       description: 'Meio a meio de expresso tradicional com leite vaporizado',
       price: 10.5,
-      image_link: 'url',
+      image_link: '/src/assets/Coffee (4).png',
     },
     {
       id: uuidv4(),
@@ -130,7 +130,7 @@ function ProductBox() {
       description:
         'Uma dose de café expresso com o dobro de leite e espuma cremosa',
       price: 8.7,
-      image_link: 'url',
+      image_link: '/src/assets/Coffee (5).png',
     },
     {
       id: uuidv4(),
@@ -139,7 +139,7 @@ function ProductBox() {
       description:
         'Bebida com canela feita de doses iguais de café, leite e espuma',
       price: 10.9,
-      image_link: 'url',
+      image_link: '/src/assets/Coffee (6).png',
     },
     {
       id: uuidv4(),
@@ -148,7 +148,7 @@ function ProductBox() {
       description:
         'Café expresso misturado com um pouco de leite quente e espuma',
       price: 11.6,
-      image_link: 'url',
+      image_link: '/src/assets/Coffee (7).png',
     },
     {
       id: uuidv4(),
@@ -156,7 +156,7 @@ function ProductBox() {
       tags: ['Tradicional', 'Com Leite'],
       description: 'Café expresso com calda de chocolate, pouco leite e espuma',
       price: 9.5,
-      image_link: 'url',
+      image_link: '/src/assets/Coffee (8).png',
     },
     {
       id: uuidv4(),
@@ -165,7 +165,7 @@ function ProductBox() {
       description:
         'Bebida feita com chocolate dissolvido no leite quente e café',
       price: 9.5,
-      image_link: 'url',
+      image_link: '/src/assets/Coffee (9).png',
     },
     {
       id: uuidv4(),
@@ -174,7 +174,7 @@ function ProductBox() {
       description:
         'Drink gelado de café expresso com rum, creme de leite e hortelã',
       price: 10.4,
-      image_link: 'url',
+      image_link: '/src/assets/Coffee (10).png',
     },
     {
       id: uuidv4(),
@@ -182,7 +182,7 @@ function ProductBox() {
       tags: ['Especial'],
       description: 'Bebida adocicada preparada com café e leite de coco',
       price: 9.4,
-      image_link: 'url',
+      image_link: '/src/assets/Coffee (11).png',
     },
     {
       id: uuidv4(),
@@ -190,7 +190,7 @@ function ProductBox() {
       tags: ['Especial'],
       description: 'Bebida preparada com grãos de café árabe e especiarias',
       price: 10.0,
-      image_link: 'url',
+      image_link: '/src/assets/Coffee (12).png',
     },
     {
       id: uuidv4(),
@@ -198,7 +198,7 @@ function ProductBox() {
       tags: ['Especial', 'Alcoólico'],
       description: 'Bebida a base de café, uísque irlandês, açúcar e chantilly',
       price: 11.6,
-      image_link: 'url',
+      image_link: '/src/assets/Coffee (13).png',
     },
   ]
 
@@ -209,8 +209,8 @@ function ProductBox() {
           <div key={product.id} className="product-box">
             <img
               className="product-image"
-              src={coffee}
-              alt="tradicional-express-coffee"
+              src={product.image_link}
+              alt={product.name}
             />
             <div className="product-tags">
               {product.tags.map((tag) => (
@@ -223,7 +223,7 @@ function ProductBox() {
             <div className="product-description">{product.description}</div>
             <div className="product-shopping-container">
               <div className="product-price">
-                US$ <span>{product.price}</span>
+                US$ <span>{product.price.toFixed(2)}</span>
               </div>
               <div className="product-shopping">
                 <div className="product-quantity-selector">
