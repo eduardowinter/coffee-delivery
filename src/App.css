@@ -241,6 +241,16 @@ span {
   justify-content: space-between;
   gap: 0.5rem;
   background-color: #E6E5E5;
+
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+button {
+  border-style: none;
 }
 
 .product-shoping-cart-icon {
@@ -253,3 +263,4 @@ span {
   align-items: center;
   justify-content: center;
 }
+
